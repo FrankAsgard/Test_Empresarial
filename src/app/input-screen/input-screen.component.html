@@ -1,0 +1,82 @@
+<div class="container mt-5">
+  <h2>Información de Usuario</h2>
+  <form class="form-container">
+    <div class="form-group">
+      <div class="icon-label">
+        <i class="bi bi-person-vcard ico"></i>
+        <label for="documentType">Tipo de documento</label>
+      </div>
+      <select
+        class="form-control"
+        id="documentType"
+        [(ngModel)]="documentType"
+        name="documentType"
+        (change)="checkFormValidity()"
+      >
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Cedula de ciudadanía">Cedula de ciudadanía</option>
+        <option value="Pasaporte">Pasaporte</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <div class="icon-label">
+        <i class="bi bi-123 ico"></i>
+        <label for="documentNumber">Numero de documento</label>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        id="documentNumber"
+        [(ngModel)]="documentNumber"
+        name="documentNumber"
+        (input)="formatDocumentNumber($event)"
+        (change)="checkFormValidity()"
+        placeholder="Enter document number"
+      />
+      <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+    </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!isFormValid"
+      (click)="searchClient()"
+    >
+      Buscar
+    </button>
+  </form>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="userNotFoundModal"
+    tabindex="-1"
+    aria-labelledby="userNotFoundModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userNotFoundModalLabel">
+            User Not Found
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">User not found.</div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <h2>Información Básica</h2>
+  <form *ngIf="client" class="form-container">
+    <div class="icon-label">
+      <div class="label-icon">
+        <i class="bi bi-person-vcard ico"></i>
+        <label for="DocumentType">Tipo de documento:</label>
+      </div>
+      <span class="input-summary"> {{ client.documentType }}</span>
+    </div>
+    <div class="icon-label">
+      <div class="label-icon">
+        <i class="bi bi-123 ico"></i>
+        <label for="DocumentNumber">Número de documento:</label>
+      </div>
+      <span class="input-summary">{{ client.documentNumber }}</span>
+    </div>
+    <div class="icon-label">
+      <div class="label-icon">
+        <i class="bi bi-credit-card-2-front ico"></i>
+        <label for="Name">Nombres y apellidos:</label>
+      </div>
+      <span class="input-summary">{{ client.name }}</span>
+    </div>
+    <div class="icon-label">
+      <div class="label-icon">
+        <i class="bi bi-envelope-at ico"></i>
+        <label for="Email">Email:</label>
+      </div>
+      <span class="input-summary">{{ client.email }}</span>
+    </div>
+    <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+  </form>
+</div>

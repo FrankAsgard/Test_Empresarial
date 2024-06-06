@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root{
+    color-scheme: light dark;
+}
+
+body{
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ccced0;
+}
+
+.container{
+    width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.form-container{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 300px;
+    padding: 10px;
+}
+
+select, input {
+    margin-top: 5px;
+}
+
+.icon-label {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 500;
+}
+
+.ico {
+    color: #5bacf2;
+    background-color: #ecf3fc;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+button.btn.btn-primary {
+    width: 180px;
+    border-radius: 20px;
+    background-color: #5bacf2;
+    border-color: #5bacf2;
+}
+
+button.btn.btn-primary:disabled {
+    background-color: #eaeef2;
+    border-color: #ccd6f6;
+    color: #6e7b94;
+}
+
+@media (max-width: 503px) {
+    .container{
+        width: 100%;
+        min-width: 340px;
+    }
+    h2{
+        text-align: center;
+    }
+}

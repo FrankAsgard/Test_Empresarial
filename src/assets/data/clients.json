@@ -1,0 +1,15 @@
+[
+    {
+      "documentType": "Cedula de ciudadanía",
+      "documentNumber": "1039454860",
+      "name": "John Hernandez",
+      "email": "john.hernandez@example.com"
+    },
+    {
+      "documentType": "Pasaporte",
+      "documentNumber": "9903456782",
+      "name": "Karen Smith",
+      "email": "karen.smith@example.com"
+    }
+  ]
+  
